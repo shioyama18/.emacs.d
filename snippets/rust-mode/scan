@@ -1,5 +1,6 @@
-# key: scan
+# -*- mode: snippet -*-
 # name: scan
+# key: scan
 # --
 macro_rules! scan {
       ($t:ty) => {

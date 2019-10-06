@@ -127,19 +127,30 @@
 ;;===========================================
 ;; yasnippet
 ;;===========================================
+;; (use-package yasnippet
+;;   :ensure t
+;;   :diminish yas-minor-mode
+;;   :bind (:map yas-minor-mode-map
+;;               ("C-c i" . yas-insert-snippet)
+;;               ("C-c n" . yas-new-snippet)
+;;               ("C-c v" . yas-visit-snippet-file)
+;;               ("C-x i l" . yas-describe-tables)
+;;               ("C-x i g" . yas-reload-all))              
+;;   :config
+;;   (yas-global-mode t)
+;;   (setq yas-prompt-functions '(yas-ido-prompt))
+;;   )
+
 (use-package yasnippet
   :ensure t
-  :diminish yas-minor-mode
-  :bind (:map yas-minor-mode-map
-              ("C-c i" . yas-insert-snippet)
-              ("C-c n" . yas-new-snippet)
-              ("C-c v" . yas-visit-snippet-file)
-              ("C-x i l" . yas-describe-tables)
-              ("C-x i g" . yas-reload-all))              
+  :bind (("C-c i" . yas-insert-snippet)
+		 ("C-c n" . yas-new-snippet)
+		 ("C-c v" . yas-visit-snippet-file))
   :config
   (yas-global-mode t)
   (setq yas-prompt-functions '(yas-ido-prompt))
   )
+
 
 ;;===========================================
 ;; Rust
