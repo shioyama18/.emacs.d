@@ -103,6 +103,17 @@
 (load custom-file)
 
 ;;===========================================
+;; ace-jump-mode
+;;===========================================
+(use-package ace-jump-mode
+      :commands ace-jump-mode
+      :init
+	  (setq ace-jump-mode-move-keys (append "asdfghjkl;:]qwertyuiop@zxcvbnm,." nil))
+	  (setq ace-jump-word-mode-use-query-char nil)
+	  :bind (("C-q" . ace-jump-mode))
+	  )
+
+;;===========================================
 ;; company
 ;;===========================================
 (use-package company
