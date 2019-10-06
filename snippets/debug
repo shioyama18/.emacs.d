@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: debug
+# key: debug
+# --
+macro_rules! debug {
+    ($($a:expr),*) => {
+        eprintln!(concat!($(stringify!($a), " = {:?}, "),*), $($a),*);
+    }	  									  
+}		

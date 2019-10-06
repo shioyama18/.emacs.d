@@ -1,0 +1,59 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/" . "Users/")
+ ("/Users/shioyama/rust/kareidoscope/" . "src/")
+ ("/Users/" . "shioyama/")
+ ("/Users/shioyama/rust/" . "kareidoscope/")
+ ("/Users/shioyama/.emacs.d/" . "snippets/")
+ ("/Users/shioyama/" . ".emacs.d/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/shioyama/.emacs.d/snippets/"
+ "/Users/shioyama/.emacs.d/"
+ "/Users/shioyama/rust/kareidoscope/src/"
+ "/Users/shioyama/rust/kareidoscope/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "debug"
+ "custom.el"
+ "ast.rs"
+ "init.el"
+ "test.txt"
+ "codegen.rs"
+ "parser.rs"
+ "lib.rs"
+ "README.md"
+ "Cargo.toml"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/shioyama/.emacs.d/snippets/" (23927 32904 109781 0) "debug" "writer" "scan" "../" "./")
+
+ ("/Users/shioyama/.emacs.d/" (23962 2076 776480 456000) "elpa/" "recentf" "init.el" "auto-save-list/" "custom.el" "places" "ido.last" "rust-mode/" "snippets/" "../" "./")
+
+ ("/Users/shioyama/" (23962 2075 624667 82000) ".viminfo" ".bash_history" ".gitconfig" "tmp/" "Downloads/" ".bash_profile" "Documents/" ".Trash/" "Applications/" "Movies/" ".ssh/" ".rustup/" "Public/" ".bash_sessions/" ".cargo/" ".emacs.d/" ".lesshst" "Library/" "Desktop/" "llvm/" "rust/" "Pictures/" ".CFUserTextEncoding" ".lldb/" ".DS_Store" "go/" "test.rs" "shioyama18.github.io/" "Music/" "../" "./")
+
+ ("/Users/shioyama/rust/kareidoscope/src/" (23961 35012 674334 150000) "parser.rs" "lexer.rs" "ast.rs" "codegen.rs" "precedence.rs" "toplevel.rs" "lib.rs" "token.rs" "bin/" "../" "./")
+
+ ("/Users/" (23924 43425 251200 92000) "shioyama/" "Shared/" ".localized" "../" "./")
+
+ ("/Users/shioyama/rust/kareidoscope/" (23952 36171 469808 71000) "src/" ".git/" ".gitignore" "README.md" "Cargo.lock" "target/" "Cargo.toml" "../" "./")
+
+ ("/Users/shioyama/rust/" (23951 10759 139935 689000) "kareidoscope/" "../" "./")
+
+ ("/Users/shioyama/.emacs.d/elpa/" (23928 12045 699301 748000) "f-20190109.906/" "markdown-mode-20190802.2215/" "s-20180406.808/" "racer-20190610.800/" "pos-tip-20150318.1513/" "flycheck-20190906.813/" "rust-mode-20190517.2037/" "flycheck-rust-20190319.1546/" "company-racer-20171205.310/" "archives/" "epl-20180205.2049/" "cargo-20190902.754/" "yasnippet-20190724.1204/" "pkg-info-20150517.1143/" "deferred-20170901.1330/" "company-20190907.1149/" "ace-jump-mode-20140616.815/" "dash-20190814.2006/" "../" "./")
+
+ ("/Users/shioyama/rust/hello/src/" (23928 11911 84057 864000) "main.rs" "../" "./")
+
+ ("/Users/shioyama/rust/hello/" (23927 34941 578580 521000) "src/" ".git/" ".gitignore" "Cargo.lock" "target/" "Cargo.toml" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
