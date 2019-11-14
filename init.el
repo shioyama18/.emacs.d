@@ -178,6 +178,11 @@
                (flycheck-rust-setup))))
 
 ;;===========================================
+;; Python
+;;===========================================
+
+
+;;===========================================
 ;; Golang
 ;;===========================================
 (use-package go-mode
@@ -197,5 +202,7 @@
   :init
   (with-eval-after-load 'company
     (add-to-list 'company-backends 'company-go)))
+
+
 
 ;;; init.el ends here
