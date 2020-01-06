@@ -11,6 +11,7 @@ My current (10/1/2019) emacs setting
 - flycheck-rust
 - racer
 - company-racer
+- elpy
 - go-mode
 - go-eldoc
 - company-go
