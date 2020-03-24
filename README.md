@@ -15,3 +15,5 @@ My current (10/1/2019) emacs setting
 - go-mode
 - go-eldoc
 - company-go
+- yaml-mode
+- json-mode

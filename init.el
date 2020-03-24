@@ -65,6 +65,9 @@
 ;; Delete auto save files when quitting
 (setq delete-auto-save-files t)
 
+;; Require newline at the end of file
+(setq require-final-newline t)
+
 ;; Set color theme
 (load-theme 'tango-dark t)
 
@@ -125,22 +128,19 @@
     (global-company-mode))
 
 ;;===========================================
+;; yaml-mode
+;;===========================================
+(use-package yaml-mode
+  :ensure t
+  :mode "\\.yml\\'"
+)
+  
+;; (require 'yaml-mode)
+;; (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+
+;;===========================================
 ;; yasnippet
 ;;===========================================
-;; (use-package yasnippet
-;;   :ensure t
-;;   :diminish yas-minor-mode
-;;   :bind (:map yas-minor-mode-map
-;;               ("C-c i" . yas-insert-snippet)
-;;               ("C-c n" . yas-new-snippet)
-;;               ("C-c v" . yas-visit-snippet-file)
-;;               ("C-x i l" . yas-describe-tables)
-;;               ("C-x i g" . yas-reload-all))              
-;;   :config
-;;   (yas-global-mode t)
-;;   (setq yas-prompt-functions '(yas-ido-prompt))
-;;   )
-
 (use-package yasnippet
   :ensure t
   :bind (("C-c i" . yas-insert-snippet)
@@ -148,9 +148,7 @@
 		 ("C-c v" . yas-visit-snippet-file))
   :config
   (yas-global-mode t)
-  (setq yas-prompt-functions '(yas-ido-prompt))
-  )
-
+  (setq yas-prompt-functions '(yas-ido-prompt)))
 
 ;;===========================================
 ;; Rust
@@ -159,6 +157,7 @@
 
 ;; rust-mode
 (use-package rust-mode
+  :ensure t
   :defer t
   :config
   (setq rust-format-on-save t))
