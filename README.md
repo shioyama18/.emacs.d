@@ -5,6 +5,7 @@ My current (06/21/2020) emacs setting
 ## Installed packages
 - use-package
 - ace-jump-mode
+- bm
 - company
 - yasnippet
 - rust-mode

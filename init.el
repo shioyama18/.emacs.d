@@ -136,6 +136,23 @@
       (setq ace-jump-word-mode-use-query-char nil)
       :bind (("C-q" . ace-jump-mode)))
 
+;; bm
+(use-package bm
+  :ensure t
+  :bind (("M-SPC" . bm-toggle)
+         ("M-]" . bm-previous)
+         ("M-[" . bm-next)
+         )
+  :init
+  (setq-default bm-buffer-persistence nil)
+  (setq bm-restore-repository-on-load t)
+  :config
+  (add-hook 'find-file-hook 'bm-buffer-restore)
+  (add-hook 'kill-buffer-hook 'bm-buffer-save)
+  (add-hook 'after-save-hook 'bm-buffer-save)
+  (add-hook 'after-revert-hook 'bm-buffer-restore)
+  (add-hook 'vc-before-checkin-hook 'bm-buffer-save))
+
 ;; company
 (use-package company
     :init
