@@ -1,19 +1,17 @@
 # Emacs Setting
 ## Description
-My current (10/1/2019) emacs setting
+My current (06/21/2020) emacs setting
 
 ## Installed packages
-- ace-jump-mode
 - use-package
+- ace-jump-mode
+- company
 - yasnippet
 - rust-mode
+- rust-playground
 - cargo
+- flycheck
 - flycheck-rust
 - racer
-- company-racer
 - elpy
-- go-mode
-- go-eldoc
-- company-go
 - yaml-mode
-- json-mode

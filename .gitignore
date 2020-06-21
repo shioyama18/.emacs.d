@@ -1,5 +1,7 @@
 /auto-save-list/
 /elpa/
+/elpy/
 ido.last
 places
 recentf
+custom.el
