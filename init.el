@@ -82,12 +82,6 @@
 ;; Enable ido
 (ido-mode t)
 
-;; Don't prompt when creating new file
-(setq iswitchb-prompt-newbuffer nil)
-
-;; find-file-at-point
-(ffap-bindings)
-
 ;;===========================================
 ;; Keyboard Settings
 ;;===========================================
@@ -140,9 +134,8 @@
 (use-package bm
   :ensure t
   :bind (("M-SPC" . bm-toggle)
-         ("M-]" . bm-previous)
-         ("M-[" . bm-next)
-         )
+         ("C-M-]" . bm-previous)
+         ("C-M-[" . bm-next))
   :init
   (setq-default bm-buffer-persistence nil)
   (setq bm-restore-repository-on-load t)
@@ -161,6 +154,11 @@
     (setq company-tooltip-align-annotations t)
     :config
     (global-company-mode))
+
+;; flycheck
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode))
 
 ;; yaml-mode
 (use-package yaml-mode
@@ -188,7 +186,6 @@
   :commands (rust-mode)
   :config
   (setq rust-format-on-save t))
-
 
 ;; cargo
 (use-package cargo
