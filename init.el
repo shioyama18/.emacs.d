@@ -16,7 +16,7 @@
       '("melpa" . "http://melpa.org/packages/") t)
 (package-initialize)
 ;(package-refresh-contents)
-       
+
 ;;===========================================
 ;; Basic Settings
 ;;===========================================
@@ -155,11 +155,6 @@
     :config
     (global-company-mode))
 
-;; flycheck
-(use-package flycheck
-  :ensure t
-  :init (global-flycheck-mode))
-
 ;; yaml-mode
 (use-package yaml-mode
   :ensure t
@@ -183,12 +178,14 @@
 
 ;; rust-mode
 (use-package rust-mode
-  :commands (rust-mode)
+  :ensure t
+  :defer t
   :config
   (setq rust-format-on-save t))
 
 ;; cargo
 (use-package cargo
+  :ensure t
   :after rust-mode
   :config
   (add-hook 'rust-mode-hook 'cargo-minor-mode))
@@ -197,25 +194,28 @@
 ;; `rustup component add rust-src`
 ;; `cargo +nightly install racer`
 (use-package racer
+  :ensure t
   :after rust-mode
   :if (executable-find "racer")
   :diminish racer-mode
   :init
   (add-hook 'rust-mode-hook 'racer-mode)
+  (add-hook 'racer-mode-hook 'eldoc-mode)
   :config
   (when (featurep 'company)
     (add-hook 'racer-mode-hook 'company-mode)
-    (bind-key "TAB" 'company-indent-or-complete-common rust-mode-map))
-  (add-hook 'racer-mode-hook 'eldoc-mode))
+    (bind-key "TAB" 'company-indent-or-complete-common rust-mode-map)))
+
 
 ;; rust-playground
 (use-package rust-playground
+  :ensure t
   :commands (rust-playground))
 
 ;; flycheck-rust
 (use-package flycheck-rust
-  :if (featurep 'flycheck)
-  :after (rust-mode flycheck)
+  :ensure t
+  :after rust-mode
   :init
   (add-hook 'rust-mode-hook 'flycheck-mode)
   (add-hook 'flycheck-mode-hook 'flycheck-rust-setup))
