@@ -176,49 +176,13 @@
 ;; Add path to racer, rustfmt, etc.
 (add-to-list 'exec-path (expand-file-name "~/.cargo/bin"))
 
-;; rust-mode
-(use-package rust-mode
+;; rustic
+(use-package rustic
   :ensure t
   :defer t
+  :mode ("\\.rs" . rustic-mode)
   :config
-  (setq rust-format-on-save t))
-
-;; cargo
-(use-package cargo
-  :ensure t
-  :after rust-mode
-  :config
-  (add-hook 'rust-mode-hook 'cargo-minor-mode))
-
-;;; racer
-;; `rustup component add rust-src`
-;; `cargo +nightly install racer`
-(use-package racer
-  :ensure t
-  :after rust-mode
-  :if (executable-find "racer")
-  :diminish racer-mode
-  :init
-  (add-hook 'rust-mode-hook 'racer-mode)
-  (add-hook 'racer-mode-hook 'eldoc-mode)
-  :config
-  (when (featurep 'company)
-    (add-hook 'racer-mode-hook 'company-mode)
-    (bind-key "TAB" 'company-indent-or-complete-common rust-mode-map)))
-
-
-;; rust-playground
-(use-package rust-playground
-  :ensure t
-  :commands (rust-playground))
-
-;; flycheck-rust
-(use-package flycheck-rust
-  :ensure t
-  :after rust-mode
-  :init
-  (add-hook 'rust-mode-hook 'flycheck-mode)
-  (add-hook 'flycheck-mode-hook 'flycheck-rust-setup))
+  (setq rustic-format-trigger 'on-save))
 
 ;;===========================================
 ;; Python

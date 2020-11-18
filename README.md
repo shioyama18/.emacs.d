@@ -1,6 +1,6 @@
 # Emacs Setting
 ## Description
-My current (06/21/2020) emacs setting
+My current (11/18/2020) emacs setting
 
 ## Installed packages
 - use-package
@@ -8,11 +8,8 @@ My current (06/21/2020) emacs setting
 - bm
 - company
 - yasnippet
-- rust-mode
-- rust-playground
-- cargo
 - flycheck
-- flycheck-rust
 - racer
+- rustic
 - elpy
 - yaml-mode
